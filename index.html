@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>易经占卜</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/background.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+  <script src="js/p5llm.js"></script>
+  <script src="js/p5Yao.js"></script>
+  <script src="js/random.js"></script>
+  <script src="js/pageSwitch.js"></script>
+  <script src="js/p5MoreAsk.js"></script>
+  <script src="js/coinAnimation.js"></script>
+  <script src="js/guaDisplay.js"></script>
+  <script src="js/p5Final.js"></script>
+</head>
+<body>
+  <!-- 正式部分 -->
+   
+  <!-- Page1_开始界面 -->
+  <div id="startPage" class="active page">
+    <canvas id="rippleCanvas"></canvas>
+    <div class="overlay"></div>
+    <button class="btn btn-start" onclick="startDivination(); goToSecondPage();askLibrary()"></button>
+  </div>
+
+  <!-- Page2_问题输入界面 -->
+  <div id="questionInputPage" class="page">
+    <div class="overlay"></div>
+    <h2>「问  事」</h2>
+    <textarea id="questionInput" rows="4" cols="50" placeholder="请输入你的问题"></textarea>
+    <button id="askButton" class="btn btn-confirm" onclick="askp5MoreAsk();"></button>
+  </div>
+
+  <!-- Page3_问题补充界面 -->
+  <div id="addInputPage" class="page">
+    <div class="overlay"></div>
+    <h2>
+      <span>「辨  事」 </span>
+    </h2>
+    <!-- 第一个问题 -->
+    <h2 id="questionSupplement1">问题补充 1</h2>
+    <textarea id="questionSupplementInput1" rows="4" cols="50" placeholder="请输入您的心声"></textarea>
+    <button id="confirmFirstQuestion" class="btn btn-confirm" onclick="showSecondQuestion();"></button>
+
+    <!-- 第二个问题（初始隐藏） -->
+    <h2 id="questionSupplement2" style="display: none;">问题补充 2</h2>
+    <textarea id="questionSupplementInput2" rows="4" cols="50" placeholder="请输入您的心声" style="display: none;"></textarea>
+    <button id="confirmSecondQuestion" class="btn btn-confirm" onclick="goToFourthPage();" style="display: none;"></button>
+  </div>
+
+  <!-- Page4_硬币动画界面 -->
+  <div id="coinAnimationPage" class="page">
+    <div class="overlay"></div>
+    <h2>「起  卦」</h2>
+    <h3 class="coin-subtitle">请投掷硬币六次</h3>
+    <div id="coinAnimation"></div>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      <div id="coin1" style="width: 100px; height: 100px; line-height: 100px; text-align: center; border-radius: 50%; border: 2px solid rgb(255, 255, 255); font-size: 20px;">
+        硬币1
+      </div>
+      <div id="coin2" style="width: 100px; height: 100px; line-height: 100px; text-align: center; border-radius: 50%; border: 2px solid rgb(255, 255, 255); font-size: 20px;">
+        硬币2
+      </div>
+      <div id="coin3" style="width: 100px; height: 100px; line-height: 100px; text-align: center; border-radius: 50%; border: 2px solid rgb(255, 255, 255); font-size: 20px;">
+        硬币3
+      </div>
+    </div>
+    <button id ="coinAnimationButton" class="btn btn-throw" onclick="playCoinAnimation(originalResults);"></button>
+    <button id="displayGuaButton" class="btn btn-displaygua" onclick="goToFifthPage();" style="display: none;"></button>
+  </div>
+
+  <!-- Page5_卦象界面 -->
+  <div id="guaPage" class="page">
+    <div class="overlay"></div>
+    <h2>「观  象」</h2>
+    <div id="guaContainer" style="display: flex; flex-direction: row; align-items: center;"></div>
+    <button class="btn btn-solvegua" onclick="goToSixthPage();askFinal();displayAnswer();displayLibraryAnswer()"></button>
+  </div>
+
+  <!-- Page6_解卦界面 -->
+   <div id="explainationPage" class="page">
+    <div class="overlay"></div>
+    <h2>「解  卦」</h2>
+    <div id="guaContainerPage6" style="display: flex; flex-direction: row; align-items: center;"></div>
+    <div id="libraryAnswerContainer" style="margin-top: 20px; font-size: 18px; color: #333;"></div>
+    <div id="finalAnswerContainer" style="margin-top: 20px; font-size: 18px; color: #333;"></div>
+    <button class="btn btn-again" onclick="goToFirstPage();"></button>
+   </div>
+
+
+</body>
+</html>
