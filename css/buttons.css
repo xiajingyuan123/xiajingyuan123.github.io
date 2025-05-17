@@ -1,0 +1,139 @@
+/* 通用按钮父类 */
+.btn {
+  width : auto;
+  height : auto;
+  /* ...existing code... */
+  background-color: transparent; /* 添加透明背景 */
+  border: none;
+  border-radius: 0; /* 移除圆角 */
+  box-shadow: none; /* 移除阴影 */
+  -webkit-appearance: none; /* 移除 Safari 默认样式 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* 修改通用按钮悬停效果 */
+.btn:hover {
+  filter: brightness(0.9); /* 只保留亮度变化效果 */
+}
+
+.btn:active {
+  transform: scale(0.95);
+  filter: brightness(0.8); /* 点击时进一步降低亮度 */
+}
+
+/* 修改 btn-start 的样式 */
+.btn-start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  background-image: url('../images/BTN_start.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; /* 确保背景透明 */
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 50px;
+  transition: all 0.3s ease;
+  /* 移除可能影响透明度的属性 */
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  z-index: 3; /* 确保按钮在最上层 */
+
+}
+
+/* 确保悬停状态也保持透明背景 */
+.btn-start:hover {
+  filter: brightness(0.9);
+  transform: translate(-50%, -50%) scale(1.05);
+  background-color: transparent;
+}
+
+/* 确保点击状态也保持透明背景 */
+.btn-start:active {
+  filter: brightness(0.8);
+  transform: translate(-50%, -50%) scale(0.95);
+  background-color: transparent;
+}
+
+#askButton {
+  /* 保持按钮原有样式 */
+  /* ...existing code... */
+  
+  /* 调整位置 */
+  position: relative;
+  top: 12%; /* 从顶部开始的位置 */
+  transform: translateY(-25%); /* 向上偏移，实现垂直位置调整 */
+}
+
+.btn-confirm {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: url('../images/BTN_confirm.png') no-repeat center center;
+  background-size: contain;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 50px;
+  z-index: 3; /* 确保按钮在上层 */
+}
+
+
+
+.btn-throw {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: url('../images/BTN_throw.png') no-repeat center center;
+  background-size: contain;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 50px;
+  z-index: 3; /* 确保按钮在上层 */
+}
+.btn-displaygua {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: url('../images/BTN_displaygua.png') no-repeat center center;
+  background-size: contain;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 50px;
+  z-index: 3; /* 确保按钮在上层 */
+}
+.btn-solvegua {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: url('../images/BTN_solvegua.png') no-repeat center center;
+  background-size: contain;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 50px;
+  z-index: 3; /* 确保按钮在上层 */
+}
+.btn-again {
+  background: url('../images/BTN_again.png') no-repeat center center;
+}
+
+

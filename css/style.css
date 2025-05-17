@@ -1,0 +1,432 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000000;
+  text-shadow: 1px 1px 2px #6B5B95; 
+}
+
+/* 问题输入页面 */
+#questionInputPage h2 {
+  color: #ffffff; /* 这会覆盖通用 h2 的颜色 */
+  text-shadow: 2px 2px 4px #2f2f2f; 
+  text-align: center;
+  margin-top: 2.5%;
+  /* 其他未指定的属性会继承通用 h2 的样式 */
+}
+
+/* 为 questionInputPage 的输入框添加特定样式 */
+#questionInput {
+  width: 40%;  /* 更改宽度 */
+  height: 150px;  /* 更改高度 */
+  margin: 30px auto;  /* 调整外边距 */
+  padding: 15px;  /* 调整内边距 */
+  border: 3px solid #333333;  /* 更改边框样式 */
+  border-radius: 8px;  /* 更改圆角 */
+  font-size: 18px;  /* 更改字体大小 */
+  color: #333333;  /* 更改文字颜色 */
+  background-color: rgba(255, 255, 255, 0.9);  /* 半透明白色背景 */
+  resize: none;  /* 禁止手动调整大小 */
+  box-shadow: 0 2px 4px rgba(91, 149, 145, 0.2);  /* 添加阴影效果 */
+  width: 40%;
+  height: 150px;
+  position: relative;
+  top: 20%;  /* 从顶部开始的位置 */
+  transform: translateY(-50%);  /* 向上偏移自身高度的一半，实现垂直居中 */
+  margin: 0 auto;  /* 水平居中 */
+  padding: 15px;
+  /* ...existing code... */
+}
+
+
+/* 问题补充页面 */
+/* 为问题补充页面的输入框添加特定样式 */
+#questionSupplementInput1, #questionSupplementInput2 {
+  width: 25%;  
+  height: 120px;  /* 设置固定高度 */
+  margin: 70px auto 20px auto;  /* 上右下左：上边距70px，下边距20px，左右自动居中 */
+  padding: 15px;  /* 内边距 */
+  
+  /* 外观样式 */
+  border: 3px solid #333333;  /* 边框样式 */
+  border-radius: 8px;  /* 圆角 */
+  font-size: 18px;  /* 字体大小 */
+  color: #333333;   /* 文字颜色 */
+  background-color: rgba(255, 255, 255, 0.9);  /* 半透明背景 */
+  resize: none;  /* 禁止手动调整大小 */
+  
+  /* 位置调整 */
+  position: relative;
+  display: block;  /* 确保是块级元素 */
+  
+  /* 阴影效果 */
+  box-shadow: 0 2px 4px rgba(107, 91, 149, 0.2);
+}
+
+/* 输入框的占位符文字样式 */
+#questionSupplementInput1::placeholder, 
+#questionSupplementInput2::placeholder {
+  color: #909090;
+  
+}
+
+/* 调整问题补充标题的位置 */
+#questionSupplement1, #questionSupplement2 {
+  font-size: 26px;  /* 字体大小 */
+  margin: 20px 0 10px 0;  /* 上右下左的间距 */
+  margin: 70px 0 10px 0;  /* 增加顶部间距到120px */
+  position: relative;
+  top: 4vh;  /* 从顶部偏移10%的视口高度 */
+  color: #000000 !important;
+  text-shadow: 1px 1px 2px #ccf0e1 !important; 
+  /* 添加背景底框 */
+  background-color: rgba(255, 255, 255, 0.8); /* 70%透明度的白色背景 */
+  padding: 8px 15px; /* 内边距使文字与底框有间距 */
+  border-radius: 8px; /* 圆角效果 */
+  display: inline-block; /* 使底框宽度适应文字内容 */
+  border: 3px solid #333333; /* 添加与输入框相同的边框样式 */
+}
+
+#addInputPage h2 {
+  color: #ffffff; /* 这会覆盖通用 h2 的颜色 */
+  text-shadow: 2px 2px 4px #2f2f2f; 
+  text-align: center;
+  margin-top: 2.5%;
+  /* 其他未指定的属性会继承通用 h2 的样式 */
+}
+
+/* 添加按钮位置调整 */
+/* 添加按钮位置调整 */
+#addInputPage .btn-confirm {
+  margin-top: 5px; /* 调整按钮与输入框的间距 */
+}
+
+/* 硬币动画页面 */
+#coinAnimation {
+  margin-top: 28vh; /* 增加顶部边距 */
+}
+
+#coinAnimationPage .btn {
+  margin-top: 8vh; /* 调整按钮间距 */
+}
+
+/* 投币界面标题样式 */
+#coinAnimationPage h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+  font-size: 2.5rem; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  text-align: center; /* 居中对齐 */
+  margin-top: 2.5vh; /* 顶部间距 */
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif; /* 中文字体 */
+  position: relative;
+  z-index: 2; /* 确保文字在上层 */
+  
+ 
+}
+
+#coinAnimationPage h3 {
+  color: #000000 !important; /* 强制应用白色文字 */
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px auto; /* 调整上下间距 */
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+  position: relative;
+  z-index: 3; /* 确保文字在上层 */
+  
+  /* 添加底框 */
+  background-color: rgb(255, 255, 255); /* 增加背景透明度 */
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  
+  /* 确保元素显示 */
+  display: block;
+  width: fit-content; /* 宽度适应内容 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* 显示卦象页面 */
+#guaPage h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+  font-size: 2.5rem; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  text-align: center; /* 居中对齐 */
+  margin-top: 2.5vh; /* 顶部间距 */
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif; /* 中文字体 */
+  position: relative;
+  z-index: 2; /* 确保文字在上层 */
+ 
+}
+
+#guaPage {
+  position: relative;
+  z-index: 1;
+}
+
+#guaPage .overlay {
+  z-index: 2;
+}
+/* 观象页面的卦象容器样式 */
+#guaContainer {
+  position: relative;
+  top: 15vh; /* 从顶部偏移 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* 增加卦象之间的间距 */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-solvegua {
+  position: relative;
+  z-index: 3; /* 确保按钮在上层 */
+  margin-top: 20vh; /* 调整按钮位置 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px; /* 添加固定宽度 */
+  height: 50px; /* 添加固定高度 */
+  background-size: contain; /* 确保背景图片合适大小 */
+}
+
+
+#guaPage .btn-solvegua {
+  z-index: 4; /* 确保按钮在最上层 */
+}
+
+
+/* 解卦界面 */
+#explainationPage h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+  font-size: 2.5rem; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  text-align: center; /* 居中对齐 */
+  margin-top: 2.5vh; /* 顶部间距 */
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif; /* 中文字体 */
+  position: relative;
+  z-index: 2; /* 确保文字在上层 */
+ 
+}
+
+/* 解卦界面按钮样式 */
+#explainationPage .btn-again {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-size: contain;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 50px;
+  z-index: 3;
+  display: block;
+  margin: 20px auto;
+}
+
+/* 调整解卦界面的层级关系 */
+#explainationPage {
+  position: relative;
+  z-index: 1;
+}
+
+#explainationPage .overlay {
+  z-index: 2;
+}
+
+/* 解卦界面最终回答样式 */
+#finalAnswerContainer {
+  width: 60%; /* 控制容器宽度 */
+  margin: 30px auto; /* 上下间距30px，左右自动居中 */
+  padding: 20px;
+  color: #000000 !important; 
+  font-size: 18px; /* 字体大小 */
+  line-height: 1.8; /* 行高 */
+  text-align: left; /* 文字左对齐 */
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+  
+  /* 添加底框样式 */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  
+  /* 添加文字阴影 */
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  
+  /* 确保显示在正确的层级 */
+  position: relative;
+  z-index: 3;
+}
+
+/* 段落间距调整 */
+#finalAnswerContainer p {
+  margin-bottom: 15px;
+}
+
+
+
+.page {
+  display: none;
+  text-align: center;
+  width: 100%;  /* 移除max-width限制 */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.active {
+  display: block !important;
+}
+
+textarea {
+  display: block;
+  width: 80%;
+  height: 100px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #6B5B95;
+  border-radius: 4px;
+}
+
+canvas {
+  margin: 20px auto;
+  border: 2px solid #6B5B95;
+  border-radius: 8px;
+}
+
+/* 输出文本框样式 */
+.output-box {
+  width: 100%;
+  height: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #6B5B95;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  overflow-y: auto; /* 如果内容超出，显示滚动条 */
+  white-space: pre-wrap; /* 保留换行符 */
+}
+
+
+#coin {
+  transition: transform 0.5s ease-in-out;
+}
+
+#coin1, #coin2, #coin3 {
+  transition: transform 0.5s ease-in-out;
+}
+
+.flip-animation {
+  transform: rotateY(360deg); /* 旋转动画 */
+}
+
+.gua-line {
+  width: 200px;
+  height: 10px;
+  margin: 5px 0;
+  background-color: black;
+}
+
+.long-line {
+  width: 200px; /* 长线 */
+}
+
+.short-line {
+  width: 200px; /* 断线，与长线长度一致 */
+  height: 10px;
+  background-color: transparent; /* 背景透明 */
+  border-left: 80px solid black; /* 左半部分的线 */
+  border-right: 80px solid black; /* 右半部分的线 */
+  border-top: none;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.gua-arrow {
+  font-size: 20px;
+  color: black;
+  margin: 5px 0;
+}
+
+.gua-name {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#startPage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#rippleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* 修改为 none，允许事件穿透到底层 */
+  z-index: 1; /* 调整层级 */
+}
+
+
+/* 覆盖全局 canvas 样式 */
+canvas#rippleCanvas {
+  border: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+#confirmSecondQuestion {
+  position: absolute; /* 绝对定位 */
+  top: 50%; /* 垂直方向居中 */
+  left: 50%; /* 水平方向居中 */
+  transform: translate(-50%, -50%); /* 修正偏移 */
+  display: none; /* 初始隐藏 */
+  background-color: #007bff; /* 按钮背景色 */
+  color: white; /* 按钮文字颜色 */
+  padding: 10px 20px; /* 按钮内边距 */
+  border: none; /* 移除边框 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer; /* 鼠标悬停时显示手型 */
+  font-size: 16px; /* 字体大小 */
+  transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+#displayGuaButton {
+  position: absolute; /* 绝对定位 */
+  top: 50%; /* 垂直方向居中 */
+  left: 50%; /* 水平方向居中 */
+  transform: translate(-50%, -50%); /* 修正偏移 */
+  display: none; /* 初始隐藏 */
+  background-color: #007bff; /* 按钮背景色 */
+  color: white; /* 按钮文字颜色 */
+  padding: 10px 20px; /* 按钮内边距 */
+  border: none; /* 移除边框 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer; /* 鼠标悬停时显示手型 */
+  font-size: 16px; /* 字体大小 */
+  transition: all 0.3s ease; /* 添加过渡效果 */ 
+}
